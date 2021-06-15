@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html,
 body {
@@ -12,6 +13,9 @@ body {
     height: 100%;
     background-color: red;
     position: relative;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    user-select: none;
 }
 .prev {
     width: 50px;
@@ -30,4 +34,9 @@ body {
     position: absolute;
     background-color: blue;
     cursor: pointer;
+}
+
+.sliderPic {
+    width: 100%;
+    display: none;
 }
