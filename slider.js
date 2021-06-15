@@ -82,6 +82,7 @@ jQuery(function () {
         function Prev() {
             $('.prev').on('click', function () {
                 if (isClicked == 0) {
+                    isClicked++;
                     i--;
                     ShowPicPrev(i)
                     HidePicPrev(i + 1);
