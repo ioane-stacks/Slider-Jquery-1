@@ -4,7 +4,7 @@ jQuery(function () {
         var i = 0;
         var x = $('.sliderPic').length;
         $('.sliderPic').eq(i).css({ 'width': `${100}%` });
-        
+
         //Next Slide
         function ShowPicNext(l) {
             var a = 0;
@@ -17,7 +17,7 @@ jQuery(function () {
                 });
                 a++;
 
-                if (a > 100) { clearInterval(animInterval); isClicked = 0;}
+                if (a > 100) { clearInterval(animInterval); isClicked = 0; }
             }
         }
 
@@ -49,8 +49,6 @@ jQuery(function () {
         }
 
 
-
-
         //Previous Slide
         function ShowPicPrev(l) {
             var a = 0;
@@ -63,7 +61,7 @@ jQuery(function () {
                 });
                 a++;
 
-                if (a > 100) { clearInterval(animInterval); isClicked = 0;}
+                if (a > 100) { clearInterval(animInterval); isClicked = 0; }
             }
         }
 
@@ -83,10 +81,12 @@ jQuery(function () {
         }
         function Prev() {
             $('.prev').on('click', function () {
-                i--;
-                ShowPicPrev(i)
-                HidePicPrev(i + 1);
-                if (i <= -1) { i = x - 1;}
+                if (isClicked == 0) {
+                    i--;
+                    ShowPicPrev(i)
+                    HidePicPrev(i + 1);
+                    if (i <= -1) { i = x - 1; }
+                }
             });
         }
 
