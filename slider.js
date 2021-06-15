@@ -4,7 +4,7 @@ jQuery(function () {
         var i = 0;
         var x = $('.sliderPic').length;
 
-
+        //Next Slide
         function ShowPicNext(l) {
             var a = 0;
 
@@ -47,6 +47,10 @@ jQuery(function () {
             });
         }
 
+
+
+
+        //Previous Slide
         function Prev() {
             $('.prev').on('click', function () {
                 i--;
