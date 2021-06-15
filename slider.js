@@ -1,6 +1,13 @@
 jQuery(function () {
-    var isClicked = 0;
+
+    function setControls() {
+        $(document).on('contextmenu', function() {
+            return false;
+        })
+    }
+
     function Slider() {
+        var isClicked = 0;
         var i = 0;
         var x = $('.sliderPic').length;
         $('.sliderPic').eq(i).css({ 'width': `${100}%` });
@@ -95,5 +102,6 @@ jQuery(function () {
         Prev();
     }
 
+    setControls();
     Slider();
 });
