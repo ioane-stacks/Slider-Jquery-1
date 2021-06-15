@@ -93,7 +93,7 @@ jQuery(function () {
                     i--;
                     ShowPicPrev(i)
                     HidePicPrev(i + 1);
-                    if (i <= -1) { i = x - 1; }
+                    if (i <= -1) { i = x - 1; HidePicPrev(i + 1); ShowPicPrev(i); }
                 }
             });
         }
